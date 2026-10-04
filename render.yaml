@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: telegram-cloud-hub
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_IDS
+        sync: false
+      - key: GDRIVE_TOKEN
+        sync: false
+      - key: GDRIVE_CLIENT_ID
+        sync: false
+      - key: GDRIVE_CLIENT_SECRET
+        sync: false
+      - key: MEGA_EMAIL
+        sync: false
+      - key: MEGA_PASSWORD
+        sync: false
+      - key: TERABOX_COOKIE
+        sync: false
+      - key: WORKERS
+        value: "1"
+      - key: MAX_RETRIES
+        value: "1"
+      - key: GDRIVE_FOLDER
+        value: TG-Hub
+      - key: MEGA_FOLDER
+        value: TG-Hub
+      - key: TERABOX_FOLDER
+        value: TG-Hub
